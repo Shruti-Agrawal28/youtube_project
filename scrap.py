@@ -52,8 +52,6 @@ def fetch_urls(query: str, max_links_to_fetch: int, wd: webdriver, sleep_between
         no_comments = WebDriverWait(wd, 10).until(EC.visibility_of_element_located((By.XPATH, "//h2[@id= 'count']/yt-formatted-string"))).text
 
         time.sleep(1)
-        i += 1
-
         response = session.get(video_play[i])
         response.html.render(timeout=120)
         soup = bs(response.html.html, "html.parser")
