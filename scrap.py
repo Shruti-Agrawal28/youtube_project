@@ -16,11 +16,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 client = pymongo.MongoClient(
-    "mongodb+srv://1234shruti-:VeOUiJ9ZxbxrVvZM@cluster0.k72vk3w.mongodb.net/?retryWrites=true&w=majority")
+    "mongodb+srv://<username:passwd>@cluster0.k72vk3w.mongodb.net/?retryWrites=true&w=majority")
 db = client.imagedb
 print(db)
 
-my_db = conn.connect(host='localhost', user='root', passwd='Shruti@2806')
+my_db = conn.connect(host='localhost', user='root', passwd='password')
 cursor = my_db.cursor()
 cursor.execute('create database if not exists yt_project')
 cursor.execute(
