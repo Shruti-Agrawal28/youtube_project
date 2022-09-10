@@ -20,7 +20,7 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
-
+wd = webdriver.Chrome(executable_path=os.environ.get(r"chromedriver.exe"), chrome_options=chrome_options)
 client = pymongo.MongoClient(
     "mongodb+srv://<username:passwd>@cluster0.k72vk3w.mongodb.net/?retryWrites=true&w=majority")
 db = client.imagedb
