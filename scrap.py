@@ -15,6 +15,12 @@ from youtube_comment_scraper_python import youtube
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
+
 client = pymongo.MongoClient(
     "mongodb+srv://<username:passwd>@cluster0.k72vk3w.mongodb.net/?retryWrites=true&w=majority")
 db = client.imagedb
